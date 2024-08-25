@@ -1,0 +1,10 @@
+@import "global.css";
+
+.list-group {
+    border-radius: 0;
+}
+
+.subtitle {
+    padding: 10px 0 0 10px;
+    color: #2b3035;
+}

@@ -1,0 +1,13 @@
+@import "global.css";
+
+.footer-main {
+    height: 50px;
+    background: #2b3035;
+    display: flex;
+    align-items: center;
+}
+.footer-content {
+    color: #ffffff;
+    margin: 0 0 0 20px;
+    font-size: 10px;
+}
