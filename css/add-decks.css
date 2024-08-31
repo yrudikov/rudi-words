@@ -1,0 +1,10 @@
+@import "global.css";
+
+.card {
+
+    border-radius: 0;
+}
+
+ .subtitle {
+     color: var(--subtitle);
+ }

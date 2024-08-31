@@ -1,5 +1,38 @@
 console.log("app.js is loaded");
 
+function loadContentFromHash() {
+    const hash = window.location.hash.substring(2);
+
+    let targetUrl = '';
+
+    switch (hash) {
+        case 'decks':
+            targetUrl = 'partials/decks.partial.html';
+            break;
+        case 'add-cards':
+            targetUrl = 'partials/add-decks.partial.html';
+            break;
+        case 'cards':
+            targetUrl = 'partials/cards.partial.html';
+            break;
+        default:
+            targetUrl = 'partials/decks.partial.html';
+    }
+    if (targetUrl) {
+        htmx.ajax("GET", targetUrl, "#main");
+    }
+}
+
+window.addEventListener('hashchange', loadContentFromHash);
+
+$(document).ready(function() {
+    if (window.location.hash) {
+        loadContentFromHash();
+    } else {
+        window.location.hash = '#/decks';
+    }
+});
+
 
 $(document).ready(function() {
     $('.navbar-nav .nav-link').on('click', function() {

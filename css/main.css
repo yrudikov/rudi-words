@@ -1,7 +1,8 @@
 @import "global.css";
 @import "header.css";
 @import "footer.css";
-@import "topic.css";
+@import "decks.css";
+@import "add-decks.css";
 
 
 .main-container {
