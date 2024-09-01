@@ -1,23 +1,19 @@
 console.log("index.js is loaded");
 
 function init() {
-    import("../js/api.js").then(() => {
-        console.log("api.js loaded");
-        import("../js/app.js").then(() => {
-            console.log("app.js loaded");
-            import("../js/add-decks.js").then(() => {
-                console.log("add-decks.js loaded");
-                import("../js/cards.js").then(() => {
-                    console.log("cards.js loaded");
-                });
-            });
-        });
-    });
+    const loadModules = Promise.all([
+        import("../js/api.js"),
+        import("../js/app.js"),
+        import("../js/add-decks.js"),
+        import("../js/cards.js")
+    ]);
+
+    loadModules.then(() => {
+        console.log("All modules loaded");
+    }).catch(err => console.error("Error loading modules:", err));
 }
 
-document.body.addEventListener("htmx:afterOnLoad", () => {
-    init();
-});
+document.body.addEventListener("htmx:afterOnLoad", init);
 
 
 const totalPartials = document.querySelectorAll(
