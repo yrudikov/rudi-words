@@ -1,10 +1,47 @@
 @import "global.css";
 
 .card {
-
     border-radius: 0;
+    width: 100%; /* Устанавливаем ширину карточки 100%, чтобы она занимала всю доступную ширину */
+    box-sizing: border-box; /* Гарантируем, что padding и border будут учитываться в общей ширине */
 }
 
- .subtitle {
-     color: var(--subtitle);
- }
+.add-decks__main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle {
+    color: var(--subtitle);
+}
+
+.add-decks__first-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    box-sizing: border-box;
+}
+
+.form-control {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px 4px 0 0;
+}
+.add-decks__button {
+    border-radius: 0 0 4px 4px;
+}
+.add-decks__button:hover {
+    background: var(--main-color);
+}
+.form-label {
+    margin: 0 0 0 3px;
+
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: #096e69;
+}
+.second-textarea {
+    margin-top: 10px;
+}

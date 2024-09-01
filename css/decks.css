@@ -8,3 +8,14 @@
     padding: 10px 0 0 10px;
     color: #2b3035;
 }
+
+.delete-button {
+    border: none;
+    background: transparent;
+    margin-left: 10px;
+    padding: 0;
+}
+
+.list-group-item {
+    cursor: pointer;
+}

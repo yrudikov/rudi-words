@@ -10,6 +10,7 @@
 :root {
 
     --subtitle: #343a40;
+    --main-color: #004947;
 
 }
 
@@ -43,4 +44,9 @@ img {
 
 ul {
     list-style: none;
+}
+
+label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
 }

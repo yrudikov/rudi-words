@@ -1,1 +1,85 @@
 @import "global.css";
+
+.card {
+    padding: 0;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    min-height: 300px;
+    padding: 0;
+    p {
+        font-size: 24px;
+    }
+}
+.cards__first-half {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+.cards__second-half {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+.cards__counting-field {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+}
+.small-icon {
+    font-size: 20px;
+    margin-top: 2px;
+}
+.big-icon {
+    margin-top: 3px;
+    font-size: 30px;
+}
+.cards__button-unguessed {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.cards__button-guessed {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.cards__second-word {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+}
+.cards__first-word {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    text-align: center;
+}
+.button-new-deck-select {
+    background: var(--main-color);
+    border: none;
+}
+.button-new-deck-select:hover {
+    background: #419895;
+    border: none;
+}

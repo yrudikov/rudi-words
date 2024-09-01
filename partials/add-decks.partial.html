@@ -1,9 +1,22 @@
 <link rel="stylesheet" href="../css/add-decks.css">
 <main>
-    <h3 class="subtitle">Add new deck:</h3>
-    <div class="card">
-        <div class="card-body">
-            This is some text within a card body.
-        </div>
+    <div class="add-decks__main">
+        <h3 class="subtitle">Add new deck:</h3>
+        <form id="add-deck-form" action="">
+            <div class="my-3 add-decks__first-input-wrapper " >
+                <label for="add-deck-title" class="form-label">Title</label>
+                <input id="add-deck-title" class="form-control" type="text" placeholder="Enter title" aria-label="default input example">
+                <label for="add-deck-textarea" class="form-label second-textarea">New words</label>
+                <textarea class="form-control" id="add-deck-textarea" rows="7" aria-describedby="add-button"
+                          placeholder="Add your words:
+                            Example:
+                            dog - собака
+                            door - двері
+                            tv - телевізор
+                            or:
+                            dog door tv" ></textarea>
+                <button class="btn btn-outline-secondary add-decks__button" type="button" id="add-button">Add deck</button>
+            </div>
+        </form>
     </div>
 </main>
