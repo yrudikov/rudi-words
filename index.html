@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Words!</title>
-    <base href="/rudi-words/">
     <link
             rel="shortcut icon"
             type="img/x-icon"
@@ -33,7 +32,7 @@
     <section
             data-hx-trigger="load"
             data-hx-swap="outerHTML"
-            data-hx-get="partials/header.partial.html"
+            data-hx-get="/partials/header.partial.html"
     ></section>
 </header>
 <main>
@@ -41,13 +40,13 @@
     <section
             data-hx-trigger="load"
             data-hx-swap="outerHTML"
-            data-hx-get="partials/main.partial.html"
+            data-hx-get="/partials/main.partial.html"
     ></section>
 </main>
 <footer
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
-        data-hx-get="partials/footer.partial.html"
+        data-hx-get="/partials/footer.partial.html"
 ></footer>
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script

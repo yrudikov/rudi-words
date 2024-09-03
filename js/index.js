@@ -26,6 +26,51 @@ document.body.addEventListener("htmx:afterOnLoad", () => {
     if (loadedPartialsCount === totalPartials) init();
 });
 
+function loadContent(url) {
+    let targetUrl = '';
 
+    switch (url) {
+        case '/decks':
+            targetUrl = 'partials/decks.partial.html';
+            break;
+        case '/add-cards':
+            targetUrl = 'partials/add-decks.partial.html';
+            break;
+        case '/cards':
+            targetUrl = 'partials/cards.partial.html';
+            break;
+        default:
+            targetUrl = 'partials/decks.partial.html';
+    }
+
+    if (targetUrl) {
+        $.get(targetUrl, function(data) {
+            $('#main').html(data);
+            if ($('#deck-list').length) {
+                populateDeckList();
+            }
+            if ($('#add-deck-form').length) {
+                const event = new Event('htmx:afterOnLoad');
+                document.dispatchEvent(event);
+            }
+        });
+    }
+}
+
+window.addEventListener('popstate', function(event) {
+    loadContent(window.location.pathname);
+});
+
+$(document).ready(function() {
+    // Initial load
+    loadContent(window.location.pathname);
+
+    $('.navbar-nav .nav-link').on('click', function(event) {
+        event.preventDefault();
+        const url = $(this).attr('href');
+        window.history.pushState({}, '', url);
+        loadContent(url);
+    });
+});
 
 
