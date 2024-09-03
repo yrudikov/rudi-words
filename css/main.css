@@ -1,7 +1,7 @@
-@import "/css/global.css";
-@import "/css/decks.css";
-@import "/css/add-decks.css";
-@import "/css/cards.css";
+@import "global.css";
+@import "decks.css";
+@import "add-decks.css";
+@import "cards.css";
 
 
 .main-container {
